@@ -1,5 +1,5 @@
 {
-  "name": "va5ja/ckeditor5-build-classic-with-imageresize",
+  "name": "@va5ja/ckeditor5-build-classic-with-imageresize",
   "version": "1.0.0",
   "description": "The classic editor build of CKEditor 5 with ImageResize plugin.",
   "keywords": [
