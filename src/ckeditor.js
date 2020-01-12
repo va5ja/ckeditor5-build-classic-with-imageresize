@@ -11,6 +11,11 @@ import UploadAdapter from '@ckeditor/ckeditor5-adapter-ckfinder/src/uploadadapte
 import Autoformat from '@ckeditor/ckeditor5-autoformat/src/autoformat';
 import Bold from '@ckeditor/ckeditor5-basic-styles/src/bold';
 import Italic from '@ckeditor/ckeditor5-basic-styles/src/italic';
+import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline';
+import Strikethrough from '@ckeditor/ckeditor5-basic-styles/src/strikethrough';
+import Subscript from '@ckeditor/ckeditor5-basic-styles/src/subscript';
+import Superscript from '@ckeditor/ckeditor5-basic-styles/src/superscript';
+import Code from '@ckeditor/ckeditor5-basic-styles/src/code';
 import BlockQuote from '@ckeditor/ckeditor5-block-quote/src/blockquote';
 import CKFinder from '@ckeditor/ckeditor5-ckfinder/src/ckfinder';
 import EasyImage from '@ckeditor/ckeditor5-easy-image/src/easyimage';
@@ -29,6 +34,8 @@ import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice';
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
+import Font from '@ckeditor/ckeditor5-font/src/font';
+import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -39,6 +46,11 @@ ClassicEditor.builtinPlugins = [
 	Autoformat,
 	Bold,
 	Italic,
+	Underline,
+	Strikethrough,
+	Subscript,
+	Superscript,
+	Code,
 	BlockQuote,
 	CKFinder,
 	EasyImage,
@@ -56,17 +68,34 @@ ClassicEditor.builtinPlugins = [
 	Paragraph,
 	PasteFromOffice,
 	Table,
-	TableToolbar
+	TableToolbar,
+	Font,
+	Alignment
 ];
 
 // Editor configuration.
 ClassicEditor.defaultConfig = {
+	alignment: {
+		options: [
+			'left',
+			'right',
+			'center',
+			'justify'
+		]
+	},
 	toolbar: {
 		items: [
 			'heading',
 			'|',
 			'bold',
 			'italic',
+			'underline',
+			'strikethrough',
+			'subscript',
+			'superscript',
+			'code',
+			'fontColor',
+			'alignment',
 			'link',
 			'bulletedList',
 			'numberedList',
@@ -85,9 +114,17 @@ ClassicEditor.defaultConfig = {
 	image: {
 		toolbar: [
 			'imageStyle:full',
-			'imageStyle:side',
+			'imageStyle:alignLeft',
+			'imageStyle:alignCenter',
+			'imageStyle:alignRight',
 			'|',
 			'imageTextAlternative'
+		],
+		styles: [
+			'full',
+			'alignLeft',
+			'alignCenter',
+			'alignRight'
 		]
 	},
 	table: {
