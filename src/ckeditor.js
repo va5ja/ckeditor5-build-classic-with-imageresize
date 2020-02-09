@@ -36,6 +36,7 @@ import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import Font from '@ckeditor/ckeditor5-font/src/font';
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
+import InsertImage from './InsertImage';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -70,7 +71,8 @@ ClassicEditor.builtinPlugins = [
 	Table,
 	TableToolbar,
 	Font,
-	Alignment
+	Alignment,
+	InsertImage
 ];
 
 // Editor configuration.
