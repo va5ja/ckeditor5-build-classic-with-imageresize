@@ -2,7 +2,6 @@ import Plugin from '@ckeditor/ckeditor5-core/src/plugin';
 import imageIcon from '@ckeditor/ckeditor5-core/theme/icons/image.svg';
 import Collection from '@ckeditor/ckeditor5-utils/src/collection';
 import { addListToDropdown, createDropdown } from '@ckeditor/ckeditor5-ui/src/dropdown/utils';
-import Model from '@ckeditor/ckeditor5-ui/src/model';
 
 export default class InsertImage extends Plugin {
 	constructor( editor ) {
@@ -44,7 +43,9 @@ export default class InsertImage extends Plugin {
 			} );
 
 			dropdownView.panelView.on( 'render', () => {
-				this.insertImageAdapter.addListeners( dropdownView.panelView.element );
+				if ( this.insertImageAdapter !== null ) {
+					this.insertImageAdapter.addListeners( dropdownView.panelView.element );
+				}
 			} );
 
 			// execute command when an item from the dropdown is selected.
