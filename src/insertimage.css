@@ -1,0 +1,4 @@
+.insert-image-dropdown .ck-dropdown__panel {
+	overflow-y: auto;
+	max-height: 278px;
+}

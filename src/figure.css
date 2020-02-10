@@ -1,0 +1,14 @@
+.ck.ck-figure {
+	margin-left: calc(-1 * var(--ck-spacing-small));
+	margin-right: var(--ck-spacing-small);
+	width: 80px;
+	height: 80px;
+	background-color: #eee;
+	line-height: 80px;
+	text-align: center;
+}
+
+.ck.ck-figure .ck-figure-img {
+	width: 100%;
+	height: auto;
+}
