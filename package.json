@@ -1,6 +1,6 @@
 {
   "name": "@va5ja/ckeditor5-build-classic-with-imageresize",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "The classic editor build of CKEditor 5 with ImageResize plugin.",
   "keywords": [
     "ckeditor5-build",
@@ -44,6 +44,7 @@
     "@ckeditor/ckeditor5-link": "^18.0.0",
     "@ckeditor/ckeditor5-list": "^18.0.0",
     "@ckeditor/ckeditor5-media-embed": "^18.0.0",
+    "@ckeditor/ckeditor5-page-break": "^18.0.0",
     "@ckeditor/ckeditor5-paragraph": "^18.0.0",
     "@ckeditor/ckeditor5-paste-from-office": "^18.0.0",
     "@ckeditor/ckeditor5-table": "^18.0.0",
@@ -95,8 +96,5 @@
     "hooks": {
       "pre-commit": "lint-staged"
     }
-  },
-  "dependencies": {
-    "@ckeditor/ckeditor5-page-break": "^18.0.0"
   }
 }
