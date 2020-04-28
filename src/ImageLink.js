@@ -82,10 +82,10 @@ export default class ImageLink extends Plugin {
 				const linkElement = conversionApi.writer.createContainerElement( 'a', { href } );
 
 				// 2. Insert link before associated image.
-				conversionApi.writer.insert( Position.createBefore( viewImage ), linkElement );
+				conversionApi.writer.insert( Position._createBefore( viewImage ), linkElement );
 
 				// 3. Move whole converted image to a link.
-				conversionApi.writer.move( Range.createOn( viewImage ), new Position( linkElement, 0 ) );
+				conversionApi.writer.move( Range._createOn( viewImage ), new Position( linkElement, 0 ) );
 			}, { priority: 'normal' } );
 		};
 	}
